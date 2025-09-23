@@ -12,7 +12,7 @@ import os, sys
 # new 999
 # new 10000
 # new 100231
-# sec fix
+# 
 
 def check_cmd(cmd):
     allowed_cmds = ['ls', 'dir', 'echo Hello, World!']
