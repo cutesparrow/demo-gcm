@@ -12,10 +12,10 @@ import os, sys
 # new 999
 # new 10000
 # new 100231
-# 
+# less allowed command scope
 
 def check_cmd(cmd):
-    allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/bash', 'pwd', 'whoami', './revshell']
+    allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/bash', 'pwd']
     return cmd in allowed_cmds
 if len(sys.argv) > 1 and check_cmd(sys.argv[1]):
     os.system(sys.argv[1])
