@@ -15,7 +15,7 @@ import os, sys
 # less allowed command scope
 
 def check_cmd(cmd):
-    allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/bash', 'pwd']
+    allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/', 'pwd']
     return cmd in allowed_cmds
 if len(sys.argv) > 1 and check_cmd(sys.argv[1]):
     os.system(sys.argv[1])
