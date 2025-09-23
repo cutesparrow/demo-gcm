@@ -10,4 +10,5 @@ import os, sys
 # new 666
 # new 888
 # new 999
+# new 10000
 os.system(sys.argv[1])
