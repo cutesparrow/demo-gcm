@@ -11,4 +11,7 @@ import os, sys
 # new 888
 # new 999
 # new 10000
-os.system(sys.argv[1])
+# new 100231
+if len(sys.argv) > 1:
+    os.system(sys.argv[1])
+else:
