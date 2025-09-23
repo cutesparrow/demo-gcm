@@ -17,6 +17,14 @@ import os, sys
 def check_cmd(cmd):
     allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/sh', 'pwd', '.revshell']
     return cmd in allowed_cmds
-if len(sys.argv) > 1 and check_cmd(sys.argv[1]):
+
+def check_cmd2(cmd):
+    # blacklist
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    for banned in banned_cmds:
+        if banned in cmd:
+            return False
+
+if len(sys.argv) > 1 and check_cmd(sys.argv[1]) and check_cmd2(sys.argv[1]):
     os.system(sys.argv[1])
 else:
