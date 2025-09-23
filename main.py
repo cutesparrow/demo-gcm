@@ -12,6 +12,11 @@ import os, sys
 # new 999
 # new 10000
 # new 100231
-if len(sys.argv) > 1:
+# sec fix
+
+def check_cmd(cmd):
+    allowed_cmds = ['ls', 'dir', 'echo Hello, World!']
+    return cmd in allowed_cmds
+if len(sys.argv) > 1 and check_cmd(sys.argv[1]):
     os.system(sys.argv[1])
 else:
