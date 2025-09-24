@@ -13,6 +13,7 @@ import os, sys
 # new 10000
 # new 100231
 # less allowed command scope
+# fix
 
 def check_cmd2(cmd):
     # blacklist
