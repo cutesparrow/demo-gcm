@@ -14,6 +14,7 @@ import os, sys
 # new 100231
 # less allowed command scope
 # fix
+# new 111 fix bugs
 
 def check_cmd2(cmd):
     # blacklist
@@ -24,4 +25,3 @@ def check_cmd2(cmd):
 
 if len(sys.argv) > 1 and check_cmd2(sys.argv[1]):
     os.system(sys.argv[1])
-else:
