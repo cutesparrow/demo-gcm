@@ -21,6 +21,8 @@ import os, sys
 def check_cmd2(cmd):
     # blacklist
     banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+
     for banned in banned_cmds:
         if banned in cmd:
             return False
