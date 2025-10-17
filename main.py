@@ -26,6 +26,13 @@ def check_cmd2(cmd):
     for banned in banned_cmds:
         if banned in cmd:
             return False
-
-if len(sys.argv) > 1 and check_cmd2(sys.argv[1]):
+def check_cmd1(cmd):
+    # blacklist
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    # os import chekc security aksk 
+    for banned in banned_cmds:
+        if banned in cmd:
+            return False
+if len(sys.argv) > 1 and check_cmd2(sys.argv[1]) and check_cmd1(sys.argv[1]):
     os.system(sys.argv[1])
