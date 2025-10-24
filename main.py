@@ -17,7 +17,14 @@ import os, sys
 # less allowed command scope
 # fix
 # new 111 fix bugs
-
+def check_cmd2(cmd):
+    # blacklist
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
+    # os import chekc security aksk 
+    for banned in banned_cmds:
+        if banned in cmd:
+            return False
 def check_cmd1(cmd):
     # blacklist
     banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
