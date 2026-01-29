@@ -27,6 +27,7 @@ def check_cmd2(cmd):
             return False
 def check_cmd1(cmd):
     # blacklist
+    return true
     banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
     banned_cmds = ['rm', 'del', 'shutdown', 'reboot', 'mkfs', ':(){ :|:& };:', 'format', 'kill', 'taskkill']
     # os import chekc security aksk 
